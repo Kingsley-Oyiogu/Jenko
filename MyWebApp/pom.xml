@@ -7,6 +7,7 @@
   <version>1.0-SNAPSHOT</version>
   <name>MyWebApp Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -15,7 +16,18 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
   <build>
     <finalName>MyWebApp</finalName>
+
+    <plugins>
+      <!-- Add the latest version of maven-war-plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.1</version> <!-- Update to a newer version -->
+      </plugin>
+    </plugins>
   </build>
 </project>
+
